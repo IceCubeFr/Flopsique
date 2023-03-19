@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Flopsique</title>
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/fonctions.js"></script>
+    </head>
+    <body>
+        <h1 id="f">FLOPSIQUE</h1>
+        <h4>La référence de la musique</h4>
+        <fieldset id="accueil"><legend>Accueil</legend>
+            <!--Volume de la musique-->
+            <p>Réglez le volume ici</p>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="50" onchange="volume()" class="left">
+            <!--Thème du site web-->
+            <p>Changez le thème du site ici</p>
+            <select id="theme" onchange="theme()">
+                <option value="clair">Clair</option>
+                <option value="sombre">Sombre</option>
+            </select>
+        </fieldset>
+        <p></p>
+        <fieldset id="categorie"><legend>Catégorie musicale</legend>
+            <!--Choix de la catégorie de musique-->
+            <select id="choixCategorie" onchange="changementCategorie()">
+                <option>-</option>
+                <option value="wii">Musiques wii</option>
+                <option value="lol">Musiques League Of Legends</option>
+                <option value="rapFr">Rap Français</option>
+            </select>
+        </fieldset>
+        <p></p>
+        <fieldset id="wii"><legend>Musiques Wii</legend>
+            <!--Liste des musiques wii-->
+            <select id="musiqueWii" onchange="lancer()">
+                <option value="musiques/musique_fond.mp3">'Wii Shop' - Nintendo</option>
+            </select>
+            <p></p>
+            <button id="lancer" onclick="lancer()">Jouer</button>
+            <button id="stop" onclick="stop()">Stop</button>
+        </fieldset>
+        <fieldset id="lol"><legend>Musiques League Of Legends</legend>
+            <!--Liste des musiques LoL-->
+            <select id="musiqueLol" onchange="lancer()">
+                <option value="musiques/starwalkin.mp3">'StarWalkin' - Lil Nas X</option>
+            </select>
+            <p></p>
+            <button id="lancer" onclick="lancer()">Jouer</button>
+            <button id="stop" onclick="stop()">Stop</button>
+        </fieldset>
+        <fieldset id="rapFr"><legend>Rap Français</legend>
+            <!--Liste musique Rap Français-->
+            <select id="musiqueRapFr" onchange="lancer()">
+                <option value="musiques/apresvousmadame.mp3">'Après vous madame' - GIMS</option>
+            </select>
+            <p></p>
+            <button id="lancer" onclick="lancer()">Jouer</button>
+            <button id="stop" onclick="stop()">Stop</button>
+        </fieldset>
+        <img id="imageWii" src="images/Wii_console.webp">
+        <img id="imageLol" src="images/league_of_legends_logo_remake_by_ecstrap-danb17f.webp">
+        <img id="imageGims" src="images/gims.png">
+        <p id="version">Version Bêta 0.1 - 18 mars 2023</p>
+    </body>
+</html>
