@@ -1,0 +1,148 @@
+body {
+    background-color: rgb(71,71,71);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 10px;
+    font-style: italic;
+}
+
+#titre {
+    font-family: 'Times New Roman', Times, serif;
+    color: #5CE1E6;
+}
+
+h4 {
+    text-align: center;
+    font-style: italic;
+    color: #38B6FF;
+}
+
+#accueil {
+    position: fixed; top: 0;
+}
+
+#en-tete {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #001822;
+}
+
+#accueil, #categorie, #wii, #lol, #rapFr, #en-tete {
+    text-align: center;
+    object-position: center;
+    border: double;
+    border-radius: 20px;
+    font-size: larger;
+}
+#lol, #wii, #rapFr {
+    width: 500px;
+    margin: 0 auto;
+    display: none;
+}
+#categorie {
+    width: 1000px;
+    margin: 0 auto;
+}
+#lancer, #stop {
+    display: inline-block;
+    background-color: #5AC4AE;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 100px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+@keyframes fade-in {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+ }
+ @keyframes fade-out {
+    0% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 0;
+    }
+ }
+
+#imageWii {
+    display: none;
+    zoom: 25%;
+    margin: 0 auto;
+}
+#imageLol {
+    display: none;
+    zoom: 40%;
+    margin: 0 auto;
+}
+#imageGims {
+    display: none;
+    zoom: 60%;
+    margin: 0 auto;
+}
+
+#version {
+    position: fixed; bottom: 0; left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color:darkgray;
+    font-size: x-large;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: 0 auto;
+    height: 5px;
+    background-color: #3D8B7B;
+    border-radius: 5px;
+}
+  
+.progress {
+    display: block;
+    height: 100%;
+    background-color: #8EFFE7;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#barProgress {
+    border: double;
+    border-radius: 20px;
+    font-size: larger;
+    width: 800px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #001822;
+    color: #cccccc;
+}
+
+#logo {
+    zoom: 20%;
+}
