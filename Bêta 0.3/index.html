@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Flopsique</title>
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/fonctions.js"></script>
+        <link rel="shortcut icon" href="images/logo_sans_texte.png" type="image">
+    </head>
+    <body>
+        <fieldset id="en-tete">
+            <img id="logo" src="images/music.png">
+            <h1 id="titre">FLOPSIQUE</h1>
+            <h4>La référence de la musique</h4>
+        </fieldset>
+        <fieldset id="accueil"><legend>Paramètres</legend>
+            <!--Volume de la musique-->
+            <p>Réglez le volume ici</p>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="50" onchange="volume()" class="left">
+            <!--Thème du site web-->
+            <p>Changez le thème du site ici</p>
+            <select id="theme" onchange="theme()">
+                <option value="sombre">Sombre</option>
+                <option value="clair">Clair</option>
+            </select>
+        </fieldset>
+        <p></p>
+        <fieldset id="categorie"><legend>Catégories</legend>
+            <!--Choix de la catégorie de musique-->
+            <select id="choixCategorie" onchange="changementCategorie()">
+                <option>-</option>
+                <option value="wii">Musiques wii</option>
+                <option value="lol">Musiques League Of Legends</option>
+                <option value="rapFr">Rap Français</option>
+            </select>
+        </fieldset>
+        <p></p>
+        <fieldset id="wii"><legend>Musiques Wii</legend>
+            <!--Liste des musiques wii-->
+            <select id="musiqueWii">
+                <option value="musiques/musique_fond.mp3">'Wii Shop' - Nintendo</option>
+                <option value="musiques/wiisports.mp3">'Wii Sport Theme' - Nintendo</option>
+                <option value="musiques/placemii.mp3">'Place Mii' - Nintendo</option>
+            </select>
+        </fieldset>
+        <fieldset id="lol"><legend>Musiques League Of Legends</legend>
+            <!--Liste des musiques LoL-->
+            <select id="musiqueLol">
+                <option value="musiques/starwalkin.mp3">'StarWalkin' - Lil Nas X</option>
+                <option value="musiques/legendsneverdie.mp3">'Legends Never Die' - Against the Current</option>
+                <option value="musiques/warriors.mp3">'Warrios' - Imagine Dragons</option>
+            </select>
+        </fieldset>
+        <fieldset id="rapFr"><legend>Rap Français</legend>
+            <!--Liste musique Rap Français-->
+            <select id="musiqueRapFr">
+                <option value="musiques/apresvousmadame.mp3">'Après vous madame' - GIMS</option>
+                <option value="musiques/oksuper.mp3">'Ok...Super...' - Orelsan</option>
+                <option value="musiques/basique.mp3">'Basique' - Orelsan</option>
+                <option value="musiques/lodeurdelessence.mp3">'L'odeur de l'essence' - Orelsan</option>
+            </select>
+        </fieldset>
+        <!--Images d'illustration de la catégorie-->
+        <img id="imageWii" src="images/Wii_console.webp">
+        <img id="imageLol" src="images/league_of_legends_logo_remake_by_ecstrap-danb17f.webp">
+        <img id="imageGims" src="images/gims.png">
+        <!--Numéro de version-->
+        <p id="version">Version Bêta 0.3 - 23 mars 2023</p>
+        <!--Progress Bar de la musique-->
+        <fieldset id="barProgress">
+            <p></p>
+            <div class="progress-container">
+                <img class="button" id="boutonPlay" src="images/svg/play.svg" onclick="lancer()">
+                <img class="button" id="boutonPause" src="images/svg/rectangle.svg" onclick="stop()">
+                <span class="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span class="duration">0:00</span>
+            </div>
+        </fieldset>
+    </body>
+</html>
